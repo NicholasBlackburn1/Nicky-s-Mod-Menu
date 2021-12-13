@@ -95,7 +95,7 @@ namespace NickysModMenu.gui {
 
 
     //TODO: get a window to dislay mod infox
-    public IEnumerator OnModInfoButtonPress()
+    public IEnumerator OnModMenuInfoButtonPress()
     {
         // whenever the usermanage face is avctive 
         while (GameObject.Find("UserInterface").GetComponentInChildren<VRC.UI.Elements.QuickMenu>(true) == null) yield return null;

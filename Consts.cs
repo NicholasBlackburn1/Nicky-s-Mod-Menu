@@ -64,5 +64,7 @@ namespace NickysModMenu.gui
         public const string LeftwingThirdButton = "Canvas_QuickMenu(Clone)/Container/Window/Wing_Left/Container/InnerContainer/WingMenu/ScrollRect/Viewport/VerticalLayoutGroup/Button_Avatars/Container/Text_QM_H3";
         public const string LeftwingFourthButton = "Canvas_QuickMenu(Clone)/Container/Window/Wing_Left/Container/InnerContainer/WingMenu/ScrollRect/Viewport/VerticalLayoutGroup/Button_Emoji/Container/Text_QM_H3";
 
+        // ModMenu Folder
+        public static string Moddir = AppDomain.CurrentDomain.BaseDirectory + @"\" + BuildInfo.Name;
     }
 }

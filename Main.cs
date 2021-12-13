@@ -23,6 +23,7 @@ namespace NickysModMenu
         private RegisterGui registerGui = new RegisterGui();
         public static MelonPreferences_Category settingsCategory;
         public static MelonPreferences_Entry<string> downloadpath;
+        public static MelonPreferences_Entry<string> avatarlist;
 
         public override void OnApplicationStart() // Runs after Game Initialization.
         {
@@ -102,9 +103,12 @@ namespace NickysModMenu
 
 
             Nickyslogger.Warning("Configering Settings Defaults");
-            settingsCategory = MelonPreferences.CreateCategory(Consts.SettingConfig);
-            downloadpath = (MelonPreferences_Entry<string>)settingsCategory.CreateEntry("downloadpath", "EnterPath");
 
+            // thus is where ic an create and use config stuff to save settigns 
+            settingsCategory = MelonPreferences.CreateCategory(Consts.SettingConfig);
+
+            downloadpath = (MelonPreferences_Entry<string>)settingsCategory.CreateEntry("downloadpath", "EnterPath");
+            avatarlist = (MelonPreferences_Entry<string>)settingsCategory.CreateEntry("avatarSaveList", Consts.Moddir);
 
             if (downloadpath == null)
             {
@@ -115,8 +119,8 @@ namespace NickysModMenu
             }
             else
             {
-                MelonLogger.Warning("Download path from config file is " + " " + Main.downloadpath.Value);
-                
+                Nickyslogger.Data("Download path from config file is " + " " + Main.downloadpath.Value);
+                Nickyslogger.Data("AvatarList path from config file is " + " " + Main.avatarlist.Value);
             }
 
             Nickyslogger.Ok("Configured Settings for the mod menu");
