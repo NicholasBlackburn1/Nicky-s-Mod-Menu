@@ -82,15 +82,15 @@ namespace NickysModMenu.gui {
 
 
 
-    public IEnumerator OnFourthButtonTitle()
-    {
-        // whenever the usermanage face is avctive 
-        while (GameObject.Find("UserInterface").GetComponentInChildren<VRC.UI.Elements.QuickMenu>(true) == null) yield return null;
-        GameObject pub = GameObject.Find("UserInterface");
+        public IEnumerator OnFourthButtonTitle()
+        {
+            // whenever the usermanage face is avctive 
+            while (GameObject.Find("UserInterface").GetComponentInChildren<VRC.UI.Elements.QuickMenu>(true) == null) yield return null;
+            GameObject pub = GameObject.Find("UserInterface");
 
-        Transform Main_Menu_title = GameObject.Find("UserInterface").transform.Find(Consts.LeftwingFourthButton);
-        Main_Menu_title.GetComponent<TMPro.TextMeshProUGUI>().text = Consts.Path;
-
+            Transform Main_Menu_title = GameObject.Find("UserInterface").transform.Find(Consts.LeftwingFourthButton);
+            Main_Menu_title.GetComponent<TMPro.TextMeshProUGUI>().text = Consts.Path;
+        }
 
 
 
