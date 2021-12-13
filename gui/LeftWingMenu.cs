@@ -34,8 +34,8 @@ namespace NickysModMenu.gui {
         Transform saftey = GameObject.Find("UserInterface").transform.Find(Consts.toggleSaftyPath);
 
         saftey.GetComponent<Button>().onClick = new Button.ButtonClickedEvent();
-        //saftey.GetComponent<Button>().onClick.AddListener(GuiActions.DumpAvatarInfo());
-    }
+        //saftey.GetComponent<Button>().onClick.AddListener();
+        }
 
 
 

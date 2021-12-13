@@ -25,6 +25,8 @@ namespace NickysModMenu
         public static MelonPreferences_Entry<string> downloadpath;
         public static MelonPreferences_Entry<string> avatarlist;
 
+       
+
         public override void OnApplicationStart() // Runs after Game Initialization.
         {
             InitMod();   
