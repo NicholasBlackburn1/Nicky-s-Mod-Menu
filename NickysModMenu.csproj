@@ -28,11 +28,20 @@
     <DebugSymbols>false</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Assembly-CSharp">
+    <Reference Include="Accessibility" />
+    <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\VRChat\MelonLoader\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\VRChat\MelonLoader\Managed\Assembly-CSharp-firstpass.dll</HintPath>
     </Reference>
     <Reference Include="AVProVideo.Extensions.UnityUI">
       <HintPath>..\VRChat\MelonLoader\Managed\AVProVideo.Extensions.UnityUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Collections.Pooled">
+      <HintPath>..\VRChat\MelonLoader\Managed\Collections.Pooled.dll</HintPath>
     </Reference>
     <Reference Include="Il2CppMono.Security">
       <HintPath>..\VRChat\MelonLoader\Managed\Il2CppMono.Security.dll</HintPath>
@@ -335,8 +344,19 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\VRChat\MelonLoader\Managed\VRC.UI.Shared.dll</HintPath>
     </Reference>
+    <Reference Include="VRC.Utility">
+      <HintPath>..\VRChat\MelonLoader\Managed\VRC.Utility.dll</HintPath>
+    </Reference>
     <Reference Include="VRCCore-Editor">
       <HintPath>..\VRChat\MelonLoader\Managed\VRCCore-Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="VRCCore-Standalone, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\VRChat\MelonLoader\Managed\VRCCore-Standalone.dll</HintPath>
+    </Reference>
+    <Reference Include="websocket-sharp, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\VRChat\MelonLoader\Managed\websocket-sharp.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

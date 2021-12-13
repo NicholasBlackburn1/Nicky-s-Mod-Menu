@@ -8,7 +8,7 @@ namespace NickysModMenu.gui
 {
     class Consts
     {
-
+        public const string SettingConfig = "NickysModMenu";
         public const string ModTogglesTitle = "Enable Data Out";
 
         // paths for windows stuff

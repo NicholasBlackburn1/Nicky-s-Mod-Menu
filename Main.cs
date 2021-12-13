@@ -1,6 +1,9 @@
 ﻿using MelonLoader;
 using NickysModMenu.gui;
 using System;
+using VRC;
+using VRC.Core;
+
 
 namespace NickysModMenu
 {
@@ -17,10 +20,12 @@ namespace NickysModMenu
     public class Main : MelonMod
     {
         private RegisterGui registerGui = new RegisterGui();
+        public static MelonPreferences_Category settingsCategory;
+        public static MelonPreferences_Entry<string> downloadpath;
 
         public override void OnApplicationStart() // Runs after Game Initialization.
         {
-         
+            InitMod();   
         }
 
         public override void OnApplicationLateStart() // Runs after OnApplicationStart.
@@ -87,6 +92,14 @@ namespace NickysModMenu
             MelonLogger.Msg("BONEWORKS_OnLoadingScreen");
         }
 
-  
+
+        // allows me to add setup stuff to main startup function
+        public void InitMod()
+        {
+            settingsCategory = MelonPreferences.CreateCategory(Consts.SettingConfig);
+            downloadpath = (MelonPreferences_Entry<string>)settingsCategory.CreateEntry("downloadpath", "EnterPath");
+        }
+
+
     }
 }
