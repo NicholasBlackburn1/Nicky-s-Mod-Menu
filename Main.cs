@@ -73,5 +73,25 @@ namespace NickysModMenu
         {
             MelonLogger.Msg("BONEWORKS_OnLoadingScreen");
         }
+
+        public void RegisterGuiLayout()
+        {
+            LeftWingMenu gui = new LeftWingMenu();
+
+
+
+            MelonCoroutines.Start(gui.OnMainTitleRun("Nicky's Mod Loaded.."));
+            MelonCoroutines.Start(gui.OnLeftWingTitle("text In left wing~...."));
+
+            // Wing Gui Button's 
+            MelonCoroutines.Start(gui.OnFirstButtonTitle());
+            MelonCoroutines.Start(gui.OnSecondButtonTitle());
+            MelonCoroutines.Start(gui.OnThirdButtonTitle());
+            MelonCoroutines.Start(gui.OnFourthButtonTitle());
+
+
+
+
+        }
     }
 }
