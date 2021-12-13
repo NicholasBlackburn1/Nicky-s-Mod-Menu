@@ -11,7 +11,7 @@ using VRC.Core;
 using VRC.UI;
 
 
-namespace NickysModded.gui { 
+namespace NickysModMenu.gui { 
 
     class LeftWingMenu
 {

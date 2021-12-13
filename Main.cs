@@ -1,4 +1,6 @@
 ﻿using MelonLoader;
+using NickysModMenu.gui;
+using System;
 
 namespace NickysModMenu
 {
@@ -14,6 +16,8 @@ namespace NickysModMenu
 
     public class Main : MelonMod
     {
+        private RegisterGui registerGui = new RegisterGui();
+
         public override void OnApplicationStart() // Runs after Game Initialization.
         {
          
@@ -26,7 +30,16 @@ namespace NickysModMenu
 
         public override void OnSceneWasLoaded(int buildindex, string sceneName) // Runs when a Scene has Loaded and is passed the Scene's Build Index and Name.
         {
-            MelonLogger.Msg("OnSceneWasLoaded: " + buildindex.ToString() + " | " + sceneName);
+            try
+            {
+                registerGui.registerGuiLayout();
+            }
+            catch(Exception e)
+            {
+                MelonLogger.Msg(ConsoleColor.DarkRed, e.Message);
+
+            }
+            
         }
 
         public override void OnSceneWasInitialized(int buildindex, string sceneName) // Runs when a Scene has Initialized and is passed the Scene's Build Index and Name.
@@ -74,24 +87,6 @@ namespace NickysModMenu
             MelonLogger.Msg("BONEWORKS_OnLoadingScreen");
         }
 
-        public void RegisterGuiLayout()
-        {
-            LeftWingMenu gui = new LeftWingMenu();
-
-
-
-            MelonCoroutines.Start(gui.OnMainTitleRun("Nicky's Mod Loaded.."));
-            MelonCoroutines.Start(gui.OnLeftWingTitle("text In left wing~...."));
-
-            // Wing Gui Button's 
-            MelonCoroutines.Start(gui.OnFirstButtonTitle());
-            MelonCoroutines.Start(gui.OnSecondButtonTitle());
-            MelonCoroutines.Start(gui.OnThirdButtonTitle());
-            MelonCoroutines.Start(gui.OnFourthButtonTitle());
-
-
-
-
-        }
+  
     }
 }
