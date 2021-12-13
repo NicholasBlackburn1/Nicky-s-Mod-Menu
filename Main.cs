@@ -1,5 +1,6 @@
 ﻿using MelonLoader;
 using NickysModMenu.gui;
+using NickysModMenu.utils;
 using System;
 using VRC;
 using VRC.Core;
@@ -96,8 +97,29 @@ namespace NickysModMenu
         // allows me to add setup stuff to main startup function
         public void InitMod()
         {
+
+            Nickyslogger.Warning("Starting Nickys Mod menu...");
+
+
+            Nickyslogger.Warning("Configering Settings Defaults");
             settingsCategory = MelonPreferences.CreateCategory(Consts.SettingConfig);
             downloadpath = (MelonPreferences_Entry<string>)settingsCategory.CreateEntry("downloadpath", "EnterPath");
+
+
+            if (downloadpath == null)
+            {
+                MelonLogger.Msg("Saving config file to disk....");
+                MelonLogger.LogWarning("OwO saved it");
+                MelonPreferences.Save();
+
+            }
+            else
+            {
+                MelonLogger.Warning("Download path from config file is " + " " + Main.downloadpath.Value);
+                
+            }
+
+            Nickyslogger.Ok("Configured Settings for the mod menu");
         }
 
 
